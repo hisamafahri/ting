@@ -9,9 +9,9 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "piranti",
+	Use:   "ting",
 	Short: "A CLI for tools developer use everyday",
-	Long: `Piranti is a CLI tools to automate your everyday
+	Long: `Ting is a CLI tools to automate your everyday
 task as a developer.`,
 }
 

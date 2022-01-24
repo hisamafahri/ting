@@ -8,9 +8,9 @@ import (
 
 var VersionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "Print the version number of Piranti",
-	Long:  `printing the current version of piranti CLI`,
+	Short: "Print the version number of Ting",
+	Long:  `printing the current version of ting CLI`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("piranti v0.1.0")
+		fmt.Println("ting v0.1.0")
 	},
 }
