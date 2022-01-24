@@ -1,4 +1,4 @@
-module github.com/hisamafahri/piranti
+module github.com/hisamafahri/ting
 
 go 1.17
 

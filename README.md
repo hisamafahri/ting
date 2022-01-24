@@ -1,4 +1,4 @@
-# Piranti CLI
+# Ting CLI
 
 A CLI for everyday developer needs.
 

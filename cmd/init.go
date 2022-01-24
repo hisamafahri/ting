@@ -3,8 +3,8 @@ package cmd
 import (
 	"os"
 
-	"github.com/hisamafahri/piranti/cmd/generate"
-	"github.com/hisamafahri/piranti/cmd/root"
+	"github.com/hisamafahri/ting/cmd/generate"
+	"github.com/hisamafahri/ting/cmd/root"
 	"github.com/spf13/cobra"
 )
 
