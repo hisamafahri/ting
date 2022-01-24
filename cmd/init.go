@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 
+	"github.com/hisamafahri/piranti/cmd/generate"
 	"github.com/hisamafahri/piranti/cmd/root"
 	"github.com/spf13/cobra"
 )
@@ -23,4 +24,8 @@ func Execute() {
 
 func init() {
 	rootCmd.AddCommand(root.VersionCmd)
+
+	// Generate
+	rootCmd.AddCommand(generate.Generate)
+	generate.Generate.AddCommand(generate.GenerateUuid)
 }
