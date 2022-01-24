@@ -8,7 +8,7 @@ import (
 )
 
 var GenerateUuid = &cobra.Command{
-	Use:   "uuid [OPTIONS]",
+	Use:   "uuid",
 	Short: "Generate universally unique identifier (UUID)",
 	Long:  `generate various amount and/or version of universally unique identifier (UUID)`,
 	Run: func(cmd *cobra.Command, args []string) {
