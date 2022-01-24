@@ -17,5 +17,5 @@ var Generate = &cobra.Command{
 
 func init() {
 	Generate.PersistentFlags().UintVarP(&Total, "total", "t", 1, "Total data needs to be generated")
-	GenerateUuid.PersistentFlags().StringVarP(&Version, "uuidVersion", "", "v4", "Version of UUID (supported: v1 and v4)")
+	GenerateUuid.PersistentFlags().StringVarP(&Version, "uuidVersion", "v", "v4", "Version of UUID (supported: v1 and v4)")
 }
