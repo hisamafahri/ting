@@ -23,7 +23,7 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.AddCommand(root.VersionCmd)
+	rootCmd.AddCommand(root.VersionCmd())
 
 	// Generate
 	rootCmd.AddCommand(generate.Generate)
