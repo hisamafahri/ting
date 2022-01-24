@@ -2,12 +2,18 @@ package root
 
 import (
 	"testing"
+
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestVersion(t *testing.T) {
-	err := VersionCmd.Execute()
+	Convey("Calling the `ting version` command", t, func() {
 
-	if err != nil {
-		t.Errorf("test failed: %s", err.Error())
-	}
+		err := VersionCmd().Execute()
+
+		Convey("If no error", func() {
+			So(err, ShouldEqual, nil)
+		})
+
+	})
 }
