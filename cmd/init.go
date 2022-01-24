@@ -28,4 +28,5 @@ func init() {
 	// Generate
 	rootCmd.AddCommand(generate.Generate)
 	generate.Generate.AddCommand(generate.GenerateUuid)
+	generate.Generate.AddCommand(generate.GenerateJwt)
 }

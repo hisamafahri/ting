@@ -6,6 +6,7 @@ import (
 
 var Total uint
 var Version string
+var IsValid bool
 
 var Generate = &cobra.Command{
 	Use:     "generate",
@@ -16,6 +17,10 @@ var Generate = &cobra.Command{
 }
 
 func init() {
+	// Parent flag
 	Generate.PersistentFlags().UintVarP(&Total, "total", "t", 1, "Total data needs to be generated")
+
+	// Child flag
 	GenerateUuid.PersistentFlags().StringVarP(&Version, "uuidVersion", "v", "v4", "Version of UUID (supported: v1 and v4)")
+	GenerateJwt.PersistentFlags().BoolVarP(&IsValid, "isValid", "", true, "Is JWT token valid or expire")
 }
