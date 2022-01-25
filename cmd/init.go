@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 
+	"github.com/hisamafahri/ting/cmd/convert"
 	"github.com/hisamafahri/ting/cmd/generate"
 	"github.com/hisamafahri/ting/cmd/root"
 	"github.com/spf13/cobra"
@@ -29,4 +30,8 @@ func init() {
 	rootCmd.AddCommand(generate.Generate)
 	generate.Generate.AddCommand(generate.GenerateUuid)
 	generate.Generate.AddCommand(generate.GenerateJwt)
+
+	// Convert
+	rootCmd.AddCommand(convert.Convert)
+	convert.Convert.AddCommand(convert.ConvertColor)
 }
