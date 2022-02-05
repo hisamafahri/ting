@@ -6,6 +6,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
+/*
+Init the ersion checker command
+
+*/
+
 func VersionCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "version",

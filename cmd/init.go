@@ -9,6 +9,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
+/*
+Init the root command
+
+*/
 var rootCmd = &cobra.Command{
 	Use:   "ting",
 	Short: "A CLI for tools developer use everyday",
@@ -16,6 +20,10 @@ var rootCmd = &cobra.Command{
 task as a developer.`,
 }
 
+/*
+Init the root function
+
+*/
 func Execute() {
 	err := rootCmd.Execute()
 	if err != nil {
@@ -23,6 +31,10 @@ func Execute() {
 	}
 }
 
+/*
+Init all of the available commands
+
+*/
 func init() {
 	rootCmd.AddCommand(root.VersionCmd())
 
