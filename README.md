@@ -38,7 +38,7 @@ ting g uuid
 # Sample output:
 # 6a350fa6-0db9-40ed-80f8-5336f8ac0420
 
-ting g uuid -v="v1" -t=5 # or: ting g uuid --uuidVersion="v1" --total=5
+ting g uuid -v v1 -t 5 # or: ting g uuid --version v1 --total 5
 
 # Sample Output:
 # 1adf271c-7cf3-11ec-b21d-c2f0362b0d18
@@ -58,7 +58,7 @@ ting g jwt
 # Sample output:
 # eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDMwMTY1NTksImlhdCI6MTY0MzAxNDc1OSwiaXNzIjoidGluZy1jbGktdG9vbHMiLCJqdGkiOiI0MWI5YzI0Ni0zMWIyLTQ2ODItYjk1Zi1hZGQ1MjNmZmM2OGIifQ.sCHUVBjDuxJEdcm14cWzAhl-oDJxNvACI9ThEe6VqSU
 
-ting g jwt --isValid=false -t=3 # or: ting g uuid --isValid=false --total=3
+ting g jwt -t 3 -e # or: ting g jwt --total 3 --expired
 
 # Sample Output:
 # eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDMwMTMwMDcsImlhdCI6MTY0MzAxNDgwNywiaXNzIjoidGluZy1jbGktdG9vbHMiLCJqdGkiOiJiMjRhZGRlNS03MTdlLTRiY2UtYTI0Zi03Yzc4OGZhMjBiYjcifQ.LKgxTUi_e7Svzqv8IWDpI6xvR204mlt195ojZySNU6s
