@@ -15,8 +15,10 @@ var GenerateJwt = &cobra.Command{
 	Short: "Generate JSON Web Token (JWT)",
 	Long:  `generate various amount and/or validity of JSON web token (JWT)`,
 	Run: func(cmd *cobra.Command, args []string) {
+		expiredFlag, _ := cmd.Flags().GetBool("expired")
+
 		for i := 0; i < int(Total); i++ {
-			token, err := generateJwt()
+			token, err := generateJwt(expiredFlag)
 			if err != nil {
 				log.Fatalln(err.Error())
 				return
@@ -26,13 +28,13 @@ var GenerateJwt = &cobra.Command{
 	},
 }
 
-func generateJwt() (string, error) {
+func generateJwt(expiredFlag bool) (string, error) {
 	token := jwt.New(jwt.SigningMethodHS256)
 	var mySigningKey = []byte("")
 
 	claim := token.Claims.(jwt.MapClaims)
 
-	if IsValid {
+	if !expiredFlag {
 		claim["exp"] = time.Now().Add(time.Minute * 30).Unix() // token expire in 30 minutes
 	} else {
 		claim["exp"] = time.Now().Add(-(time.Minute * 30)).Unix() // token expire 30 minutes ago
